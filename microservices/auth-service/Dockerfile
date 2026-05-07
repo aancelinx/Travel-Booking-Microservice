@@ -6,6 +6,7 @@ COPY package*.json ./
 RUN npm ci
 COPY . .
 RUN npm run build
+CMD ["npm", "run", "start:dev"]
 
 # production stage
 FROM base AS production
